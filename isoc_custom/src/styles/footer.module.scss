@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import "../utilities/variables";
+
+.container {
+  max-width: 1170px;
+  margin: auto;
+  font-family: 'Poppins', sans-serif;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.footer_col a {
+  list-style: none;
+  text-decoration: none;
+  color: $nav-text-dark;
+}
+
+.footer {
+  background-color: $footer-background-dark;
+  padding: 70px 0;
+}
+
+.footer_col {
+  width: 25%;
+  padding: 0 15px;
+}
+
+.footer_col h4 {
+  font-size: 18px;
+  color: $footer-text-dark;
+  text-transform: capitalize;
+  margin-bottom: 35px;
+  font-weight: 500;
+  position: relative;
+}
+
+.footer_col h4::before {
+  content: '';
+  position: absolute;
+  bottom: -7px;
+  background-color: $footer-underline;
+  height: 3.5px;
+  width: 50px;
+}
+
+.footer_col ul li:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.footer_col ul li {
+  font-size: 16px;
+  text-transform: capitalize;
+  text-decoration: none;
+  font-weight: 300;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+.footer_col ul li:hover {
+  padding-left: 8px;
+  transition: all 0.3s;
+  font-weight: bold;
+}
+
+.footer_col .social_links a {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: $button-light;
+  margin: 0 15px 15px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: $button-text-light;
+  transition: all 0.5s ease;
+}
+
+.footer_col .social_links a:hover {
+  color: #24262b;
+  background-color: #ffffff;
+}
+
+.footer_logo {
+  display: flex;
+  align-self: center;
+  justify-content: center;
+}
+
+.footer_logo img {
+  width: auto;
+  height: auto;
+  max-width: 150px;
+  max-height: 150px;
+  background-color: white;
+}
+
+/*responsive*/
+@media(max-width: 750px) {
+  .footer_col {
+    width: 50%;
+    margin-bottom: 40px;
+  }
+
+  .footer_logo img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .footer_logo {
+    display: block;
+    margin-top: -3.5rem;
+  }
+}
+
+@media(max-width: 600px) {
+
+  .footer {
+    padding: 20px 0;
+  }
+
+  .footer_col {
+    width: 100%;
+  }
+
+  .footer_logo {
+    display: flex;
+    margin-top: 0;
+  }
+
+  .footer_logo img {
+    width: 200px;
+    height: 200px;
+  }
+}
